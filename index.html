@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sulaymaniyah</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+<style>
+*{box-sizing: border-box;}		  
+body{
+	padding: auto;
+    background-color: black;
+  }
+.menu {
+  background: linear-gradient(
+  45deg,
+  rgba(255,255,255,1.00) -30%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(255,255,255,1.00) 120%
+ );
+}
+ul {
+	font-size: 5px;
+    text-decoration: none;
+    list-style-type:none;
+    display: flex;
+	overflow:hidden;
+    justify-content: space-around;
+  	padding-top: 12px;
+	padding-right: 19px;
+	padding-left: 19px;
+}	  
+.menu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding:0px 22px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 20px;
+  box-shadow: 0.9px hsla(0, 0%, 100%, 0);
+  margin: 0px;
+  margin-bottom: 2px;
+  margin-top: -8px;
+}
+.menu a:hover {
+  background-color: hsla(0,0%,0%,0.67);
+  color:white;
+  border-radius: 22px;
+  transition-duration: 0.1s;
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}  
+.menu a:active{
+  background-color: hsla(0,0%,0%,0.65);
+  border:0;
+  color:yellow;
+  border-radius: 19px;
+  transform: translateY(4px);
+  }
+.carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+@media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cookie-Regular'), url(http://fonts.gstatic.com/s/cookie/v11/syky-y18lb0tSbf9kgqU.woff) format('woff');
+}
+.basik	{
+ background-color: rgba(0,0,0,1);
+ border-radius: 19px;
+ margin:auto;
+ color:  #ffffff;
+ font: normal 36px 'Cookie', cursive;
+ text-align: center;
+	}
+.basik1{
+		color:  #e0ac1c !important;
+	}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #FF1100;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+  padding-top: 60px;
+}
+.modal-content {
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 90%;
+}
+.close {
+  position: absolute;
+  top: 0;
+  font-size: 35px;
+  font-weight: bold;
+  color:red;
+  background-color: white;
+  padding: 3px 7px 3px 7px;
+}
+.close:hover, .close:focus {
+  color: red;
+}
+.modal-content {
+  margin: 5% auto 15% auto;
+  border: 4px solid gold;
+  width: 90%;
+  border-radius: 19px;
+  background: linear-gradient(
+  181deg,
+  rgba(0,156,255,1.00) 44%,
+  rgba(255,255,255,1.00) 120%
+ );  
+}	  
+.imgcontainer {
+  margin: 55px 0 12px 0;
+}
+.img-js{
+	 width: 65%;
+	 height: 95%;
+	 max-height: 473px;
+ }
+footer{
+	position: inherit;
+	bottom: 0;
+}
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+.footer-distributed{
+  background: linear-gradient(
+  45deg,
+  rgba(0,0,0,1.00) -10%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(0,0,0,0.90) 120%
+ );
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-distributed .footer-left{
+	width: 30%;
+}
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+.footer-distributed .footer-left img{
+	width: 30%;
+	margin-left: 62px;
+}
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+.footer-distributed .footer-links{
+	color:  #000000;
+	margin: 20px 0 12px;
+    text-align: center;
+
+}
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+		color: white;
+	}
+.footer-distributed .footer-company-name{
+	color:  #000000;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+    text-align: center;
+	margin-top: 33px;
+}
+.footer-distributed .footer-center{
+	width: 35%;
+	margin-left: 45px;
+}
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+.footer-distributed .footer-right{
+	width: 30%;
+}
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 95px;
+}
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+	margin-left: 95px;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-distributed .footer-icons a:hover{
+		background-color:  #0072B7;
+	}
+@media (max-width: 880px) {
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+}
+.image {
+  display: block;
+  width: 100%;;
+  height: 150px;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1; 
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 2px;
+  text-align: center;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text {
+  background-color: gold;
+  color: black;
+  font-size: 20px;
+  padding: 5px 8px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+a:hover{
+	  text-decoration: none;
+  }
+.container1 {
+  position: relative;
+  max-width: 230px;
+  margin: 15px;
+} 
+.container1:hover .image {
+  opacity: 0.5;
+}
+.container1:hover .middle {
+  opacity: 1;
+}
+.container1:hover .overlay {
+ background: rgba(0, 0, 0,0);
+ color: rgba(0, 0, 0,0);
+}
+.container1 .overlay {
+  opacity: 1;
+}
+.main {
+	padding: 50px;
+	margin-bottom: 25px;
+	margin-top: 10px;
+}
+.row {
+  margin: auto;
+
+}
+.column {
+  display: none;
+  float: left;
+}
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #6600F8;
+  color:white;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<nav>
+    <div>
+      <ul class="menu">
+		 <li><a href="/index.html" ><img src="/images/logo-rash.png" alt="logo" width="80" height="30" id="logo" title="Home"></a></li>
+        <li><a href="/Introduce.html">Introduce</a></li>
+        <li><a href="/Gallery.html">Gallery</a></li>
+        <li><a href="/About me.html">About</a></li>
+      </ul>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox" >
+      <div class="item active">
+        <img src="/images/bg-sulaymani3.jpg" alt="Image" >     
+      </div>
+      <div class="item">
+        <img src="/images/bg-sulaymani1.jpg" alt="Image" >     
+      </div>	
+	  <div class="item">
+        <img src="/images/bg-sulaymani.jpg" alt="Image">     
+      </div>	  	
+	 <div class="item">
+        <img src="/images/bg-sulaymani2.jpg" alt="Image">     
+     </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" title="Previous"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" title="Next"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div> 
+<div class="container text-center" style="color:white;">    
+  <h3>What is there to do in Sulaymaniyah?</h3>
+	<div class="main">
+<div id="myBtnContainer1">
+  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+  <button class="btn" onclick="filterSelection('Museum')">Museum</button>
+  <button class="btn" onclick="filterSelection('park')">park</button>
+  <button class="btn" onclick="filterSelection('Sightseeing')">Sightseeing</button>
+</div>
+<hr>	
+<div class="row">
+	<div class="column park">
+<div class="container1">
+  <img src="/images/Sarchnar_Park (1).jpg" alt="Sarchnar_Park" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id08" onclick="document.getElementById('id08').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id08" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Sarchnar_Park (2).jpg" class="img-js" alt="Sarchnar_Park">
+      <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>		
+</div>
+    <div class="container">
+		  <h1 class="basik">Sarchnar <span class="basik1">Park</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">This resort is just 5 kilometers west of Sulaimaniya. The area is covered with fresh spring flowers and surrounded by tall trees, offering shade and beautiful nature. Recently, tourist facilities have been built, such as hotels, restaurants, swimming pools, and playgrounds for children. There is also Nawroz Park, Chaqchaq Park, and a small zoo in the area for visitors to enjoy.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id08');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Sarchnar</div>
+</div>
+  </div>
+	<div class="column Sightseeing">
+<div class="container1">
+  <img src="/images/ahmad awa (2).jpg" alt="Ahmad Awa Waterfall" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id13" onclick="document.getElementById('id13').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id13" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/ahmad awa (1).jpg" class="img-js" alt="Ahmad Awa Waterfall">
+      <span onclick="document.getElementById('id13').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Ahmad Awa <span class="basik1">Waterfall</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">An incredible waterfall hidden between the valleys and mountains of Hawraman region. Highly recommend to visit if you are in Slemani city. One and half hour away by driving and pater easy climbing. Good for shopping some local products too.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id13').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id13');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Ahmad Awa</div>
+</div>
+  </div>
+    <div class="column Museum">
+<div class="container1">
+  <img src="/images/Sulaymaniayh_Museum.jpg" alt="Sulaymaniayh_Museum" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id01" onclick="document.getElementById('id01').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/s_photo (117).jpg" class="img-js" alt="Sulaymaniayh_Museum">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Sulaymaniyah <span class="basik1">Museum</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">The Sulaymaniayh Museum is an archeological museum which is located within heart of the city of Sulaymaniyah, Sulaymaniyah Governorate, Kurdistan Region, Iraq. It is also known as Slemani Museum or Sulaimaniya Museum. It is the second largest museum in Iraq, after the National Museum of Iraq in Baghdad in terms of contents. It houses artifacts which date back to the pre-historic period to the late Islamic and Ottoman periods. Several halls of the Museum have undergone renovation work and the Museum was closed to the public for refurbishment from October 1, 2018, to October 2019.
+		Since 2011 CE, the Museum has been collaborating with the UNESCO to develop and renovate the Museum and expand its building.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Museum</div>
+</div>
+  </div>
+	<div class="column Sightseeing">
+	  <div class="container1">
+  <img src="/images/Piramagrun (2).jpg" alt="Piramagrun Mountain" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id15" onclick="document.getElementById('id15').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id15" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Piramagrun (1).jpg" class="img-js" alt="Piramagrun Mountain">
+      <span onclick="document.getElementById('id15').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Piramagrun <span class="basik1">Mountain</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">A 2611 meters hight beautiful rocky mountain overlooking Slemani city. Never hike alone to there. It’s difficult and you can get lost very easily. There are local hiking groups who go to the mountain few times a year in different seasons.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id15').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id15');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Piramagrun</div>
+</div>
+  </div>
+    <div class="column Museum">
+<div class="container1">
+  <img src="/images/saray_azadi (2).jpg" alt="saray_azadi" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id02" onclick="document.getElementById('id02').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/saray_azadi (1).jpg" class="img-js" alt="saray_azadi">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Saray Azadi <span class="basik1">Square</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Saray Azadi (Freedom Square) is a square in the old town centre in the Iraqi Kurdish city of Sulaymania. The square has otherwise been known as Bar Darki Sara (Sara Gate Square) and more recently Maidani Azadi. Some Kurdish media outlets have combined the old and the new name, calling it Saray Azadi. All three names are still in usage, but Saray Azadi has been more frequently used. The square was occupied by anti-KRG protestors between 17 February and 18 April 2011. The center and the old town of Slemani city, you can find multiple and different types of shops, cafeterias and restaurants. It’s nice to walk around this area.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id02');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Saray Azadi</div>
+</div>
+  </div>
+    <div class="column Museum">
+<div class="container1">
+  <img src="/images/Hazar_Merd (1).jpg" alt="Hazar_Merd" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id03" onclick="document.getElementById('id03').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id03" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Hazar_Merd (2).jpg" class="img-js" alt="Hazar_Merd">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Hazar Merd <span class="basik1">Cave</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Hazar Merd is a group of Paleolithic cave sites excavated by Dorothy Garrod in 1928. The caves are located south-southwest of Sulaymaniyah in Sulaymaniyah Governorate in Iraq. Garrod's soundings in two caves in the Hazar Merd group provided evidence of Middle and Epi-Paleolithic occupation.The Dark cave or Ashkawty Tarik in Kurdish has a commanding view of the local valley and is close to a small spring and a village with the same name. Dark Cave has a single lofty chamber 11 by 12 m wide. The Mousterian layer, level C, is over 3 m thick, containing many hearths and burnt flints and bones. The stone tool assemblage, of flint and chert, is dominated by side scrapers and Mousterian points, with no evidence of the Levallois technique. In the lowest reaches of level C, but still within Mousterian layers, two hand-axes were found. Side-scrapers slightly decrease in popularity towards the top of level C. The faunal assemblage, although fragmentary, again shows a completely modem aspect, with bones from wild goat, red deer, gazelle, field mouse, mole rat, hare, bat and several birds of woodland and scrub habitat. This evidence, and that from the presence of snails of the species Helix salomonica, indicates a mixed environment of woodland, grassland and scrub, much as exists today. A smaIl sounding in the adjacent Water Cave also revealed evidence of Mousterian occupation. Garrod did not keep all the excavated material and she only kept those pieces that were topologically informative. Remaining pieces were thrown away at the site.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id03');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Hazar Merd</div>
+</div>
+  </div>
+	<div class="column park">
+<div class="container1">
+  <img src="/images/chavi land (1).jpg" alt="Chavi Land" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id12" onclick="document.getElementById('id12').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id12" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/chavi land (2).jpg" class="img-js" alt="Chavi Land">
+      <span onclick="document.getElementById('id12').style.display='none'" class="close" title="Close Modal">&times;</span>
+</div>
+    <div class="container">
+		  <h1 class="basik">Chavi <span class="basik1">Land</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Chaviland is a real relaxation and set your mind at ease. The way the trees are grown, the streets and buildings are built look fascinating. It is a very suitable place for families and kids to spend wonderful time. There are many restaurants and Cafe in there. It is a good experience to try the Teleferik to see the city and the Azmar mountain.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id12').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id12');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Chavi Land</div>
+</div>
+  </div>
+	<div class="column Museum">
+<div class="container1">
+  <img src="/images/Barda_Qaraman (2).jpg" alt="Barda_Qaraman" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id04" onclick="document.getElementById('id04').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id04" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Barda_Qaraman (1).JPG" class="img-js" alt="Barda_Qaraman">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+</div>
+    <div class="container">
+		  <h1 class="basik">Barda Qaraman <span class="basik1">Monument</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Barda Qaraman (the Rock of the Hero)Sulaymaniyah south of Kurdistan. The site is 35 Km west of Sulaimani on the Sulaimani – Kirkuk high way. During the British invasion to Iraq, King Mahmood resisted the British troops behind the mentioned Rock defending the Kingdom of Kurdistan. Today the site is open for tourists. Around 30 minutes away from Slemani city, on highway to Kirkuk. Interesting and beautiful to walk around and see monuments and mountains. Suitable for family visit too.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id04');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Barda Qaraman</div>
+</div>
+  </div>
+	<div class="column Sightseeing">
+<div class="container1">
+  <img src="/images/Merquli (1).jpg" alt="Merquli" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id17" onclick="document.getElementById('id17').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id17" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Merquli (2).jpg" class="img-js" alt="Merquli">
+      <span onclick="document.getElementById('id17').style.display='none'" class="close" title="Close Modal">&times;</span>		
+</div>
+    <div class="container">
+		  <h1 class="basik">Merquli's <span class="basik1">Rock Relief</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">This rock-relief lies on one of the tops of Mt. Pira Magroon, Sulaimaniya, Iraq. In 2009 CE, a small mountain settlement was excavated on the top of Mt. Merquli, the peak just south of Mt. Pira Magroon, by a team from the Sulaymaniyah Board of Antiquities, directed by Mr. Zuhair Rajab. The settlement has been attributed to the Parthian period because of a nearby rock relief that overlooks the entrance to the mountain valley of the modern village Zewiya, which shows a man in Parthian royal dress facing towards the valley. This image shows the relief. There is no inscription and at present it must remain open whether this image shows one of the Arsacid kings or a local ruler. According to Mr. Hashim Hama Abdullah, the relief was discovered accidentally by a local villager in the year 1999 CE.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id17').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id17');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Merquli</div>
+</div>
+</div>
+    <div class="column Museum">
+<div class="container1">
+  <img src="/images/Paikuli_Tower_Monument (1).jpg" alt="Paikuli_Tower" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id05" onclick="document.getElementById('id05').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id05" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/the-paikuli-inscription.jpg" class="img-js" alt="Paikuli_Tower">
+      <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+</div>
+    <div class="container">
+		  <h1 class="basik">Paikuli Tower <span class="basik1">Monument</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">The Sulaymaniyah Museum in collaboration with the Sapienza University of Rome opened a new gallery on June 10, 2019. The gallery was sponsored by the Italian Ministry of Foreign Affairs (MAECI) and the Ministry of Cultural Heritage (MiBAC). All of the inscribed stone blocks (including many newly discovered ones after 2006) of the commemorative monument of the Sassanian king Narseh (c., 293 CE) were displayed for the very first time to the public. In addition, many building stone blocks and some Sassanian coins and bullae were also included in this permanent exhibition. Easy to reach with car. It’s close to Barkal Village between Darbandikhan and Qaradagh area. You can have a nice walk around. Lots of big rocks remnants of this tower is scattered around. The rocks with scripts or texts are preserved in Slemani museum.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id05');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Paikuli Tower</div>
+</div>
+  </div>
+	<div class="column park">
+<div class="container1">
+  <img src="/images/a-beautiful-green-park (1).jpg" alt="Hawary_Shar_Park" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id10" onclick="document.getElementById('id10').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id10" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/a-beautiful-green-park (2).jpg" class="img-js" alt="Hawary_Shar_Park">
+      <span onclick="document.getElementById('id10').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Hawary Shar <span class="basik1">Park</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">The park is located at Hawar shar area around 15-20 min. drive from city . It is the largest park in Sulaymaniah consist of 4400 acres land. There are many attractions for recreational activities including visiting of artificial fountain lake , bicycling arena , skateboarding club and particularly Romanian amphitheater. There are other many activities listed on the park map board but in fact doesn’t exist e.g Golfing . A recommended place for family visit , a club car can be hired to avoid exhausting with long walk.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id10').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id10');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Hawary Shar</div>
+</div>
+  </div>
+	<div class="column Sightseeing">
+<div class="container1">
+  <img src="/images/Jasana Cave (2).jpg" alt="Jasana Cave" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id16" onclick="document.getElementById('id16').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id16" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Jasana.jpg" class="img-js" alt="Jasana Cave">
+      <span onclick="document.getElementById('id16').style.display='none'" class="close" title="Close Modal">&times;</span>
+</div>
+    <div class="container">
+		  <h1 class="basik">Jasana <span class="basik1">Cave</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Very easy to access it by car and easy hike to it from parking area. Its cold and windy area even in summer because it’s located between mountains. <strong>Some historical facts:</strong> This cave is 50 km west of Slemani city, in Surdash area. It’s located behind Kani Khan Village. On 1923, after battle with British army, King Mahmood Hafid was forced to leave Slemani city and move to Surdash area and made this cave his hide-out and headquarter. This cave witnessed issuing first edition of “Bangi Haq” newspaper.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id16').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id16');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Jasana</div>
+</div>
+  </div>
+    <div class="column Museum">
+<div class="container1">
+  <img src="/images/kurdish_Heritage (2).jpg" alt="kurdish_Heritage" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id06" onclick="document.getElementById('id06').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id06" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Heritage (1).jpg" class="img-js" alt="kurdish_Heritage">
+      <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Kurdish Heritage <span class="basik1">Museum</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Kurdistan Museum aims to convey the spirit of the Kurdish Sightseeing, their rich culture and the future of Kurdistan, says Libeskind. Kurdistan Museum will reach out to the Kurdish diaspora, creating a national and international focus for Kurdish history and identity.
+		Friendly and helpful staff with great meals short portions. Wonderful service excellent value. Fast service no complaints.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id06');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Kurdish Heritage</div>
+</div>
+  </div>
+	<div class="column park">
+<div class="container1">
+  <img src="/images/Bakhi_Gshty (2).jpg" alt="Bakhi_Gshty" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id11" onclick="document.getElementById('id11').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id11" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Bakhi_Gshty (1).jpg" class="img-js" alt="Bakhi_Gshty">
+      <span onclick="document.getElementById('id11').style.display='none'" class="close" title="Close Modal">&times;</span>
+</div>
+    <div class="container">
+		  <h1 class="basik">Bakhi Gshty <span class="basik1">Park</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Very nice garden in the mid of the busiest part of Slemani city. Free entry and open 24 hours. Nice for a walk with family or friends.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id11').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id11');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Bakhi Gshty</div>
+</div>
+  </div>
+	<div class="column Sightseeing">
+<div class="container1">
+  <img src="/images/dukan4.jpg" alt="Lake Dukan" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id14" onclick="document.getElementById('id14').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id14" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/dukan.jpg" class="img-js" alt="Lake Dukan">
+      <span onclick="document.getElementById('id14').style.display='none'" class="close" title="Close Modal">&times;</span>	
+</div>
+    <div class="container">
+		  <h1 class="basik">Dukan <span class="basik1">Lake</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Dukan Lake, is the largest lake in Iraq. It is located close to the city of Ranya, and is a reservoir on the Little Zab created by the construction of the Dukan Dam. The Dukan Dam was built between 1954 and 1959 as a multi-purpose dam to provide water storage, irrigation and hydroelectricity. Prior to the flooding of Lake Dukan, the area has been subjected to archaeological research to investigate as many archaeological sites as possible. An archaeological survey in the Ranya Plain documented some 40 archaeological sites with evidence for occupation ranging from the sixth millennium BCE up to the present. Five of these sites were then excavated: Tell Bazmusian, ed-Dem, Kamarian, Qarashina and Tell Shemshara. The excavations at Tell Bazmusian revealed a temple dating to the second millennium BCE. At Tell Shemshara, an early-sixth millennium BCE village was excavated, as well as an early-second millennium BCE palace with a small archive of clay tablets. The inhabitants of some 50 villages in the flooded area, around 1,000–1,200 families, were resettled to the west of the lake. The surface area of the lake is 270 square kilometres (100 sq mi). At normal operation, the capacity of the reservoir is 6.8 cubic kilometres (1.6 cu mi) while its maximum capacity is 8.3 cubic kilometres (2.0 cu mi). At that capacity, the surface elevation is 515 metres (1,690 ft) above sea-level. In order to operate the power station, the surface elevation must be between 469 and 511 metres (1,539 and 1,677 ft). The drainage basin of the Dukan Dam is 11,700 square kilometres (4,500 sq mi).</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id14').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id14');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Dukan</div>
+</div>
+  </div>
+	<div class="column Museum">
+<div class="container1">
+  <img src="/images/Amna Suraka.jfif" alt="Amna Suraka" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id07" onclick="document.getElementById('id07').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id07" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Amna Suraka.jpg" class="img-js" alt="Amna Suraka">
+      <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+		
+</div>
+    <div class="container">
+		  <h1 class="basik">Amna Suraka <span class="basik1">Museum</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">Amna Suraka, was a torture chamber for thousands of prisoners between 1979 and 1991 under the rule of Saddam Hussein, then it was overrun by the Kurdish Peshmerga after the 1991 Kurdish uprising. The government of Kurdistan region has done little to lighten up the former prison. An old security headquarter of Baath party in Suly, where in 1980s security forces where prisoning and torturing Sightseeing. It reminds of Nazi or Soviet torturing places with small prison cells. There is another section in this building where they demonstrate Kurdish local dress designs. Nice idea to make beautiful cultural show beside this tragic place.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id07').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id07');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Amna Suraka</div>
+</div>
+  </div>
+    <div class="column park">
+<div class="container1">
+  <img src="/images/sarchnar-park (1).jpg" alt="Azadi_Park" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id09" onclick="document.getElementById('id09').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id09" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Azadi_Park (2).jpg" class="img-js" alt="Azadi_Park">
+      <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close Modal">&times;</span>
+		
+</div>
+    <div class="container">
+		  <h1 class="basik">Azadi <span class="basik1">Park</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">This resort is just 5 kilometers west of Sulaimaniya. The area is covered with fresh spring flowers and surrounded by tall trees, offering shade and beautiful nature. Recently, tourist facilities have been built, such as hotels, restaurants, swimming pools, and playgrounds for children. There is also Nawroz Park, Chaqchaq Park, and a small zoo in the area for visitors to enjoy.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id09');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Azadi</div>
+</div>
+  </div>
+    <div class="column Sightseeing">
+<div class="container1">
+  <img src="/images/Goizha And Azmar (1).jpg" alt="Goizha And Azmar" style="width:100%" class="image">
+    <div class="middle">
+    <a href="#id18" onclick="document.getElementById('id18').style.display='block'"><div class="text">More..</div></a>
+  </div>
+<div id="id18" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="/images/Goizha And Azmar (2).jpg" class="img-js" alt="Goizha And Azmar">
+      <span onclick="document.getElementById('id18').style.display='none'" class="close" title="Close Modal">&times;</span>		
+</div>
+    <div class="container">
+		  <h1 class="basik">Goizha And Azmar <span class="basik1">Mountains</span></h1>
+		<hr style="border-color: black;">
+		<p style="color: black;">These two tall mountains overlook the city of Sulaimaniya. In the winter people visit the area to enjoy the snow and in summer they come to enjoy the mountains cool temperatures and natural beauty.</p>
+    </div>
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id18').style.display='none'" class="cancelbtn">Close</button>
+    </div>
+  </form>
+</div>
+<script>
+var modal = document.getElementById('id18');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <div class="overlay">Goizha And Azmar</div>
+</div>
+  </div>	
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+var btnContainer1 = document.getElementById("myBtnContainer1");
+var btns = btnContainer1.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</div>
+</div>
+<footer class="footer-distributed">
+	<div class="footer-left">
+        <a href="/index.html" title="Home" style="text-decoration: none;"><img src="/images/logo-rash.png" alt="logo">
+		<h3 style="	text-align: center;"><span>Sulaymaniyah</span> City</h3></a>
+		<p class="footer-links">
+			<a href="/index.html">Home</a>
+			|
+			<a href="/Introduce.html">Introduce</a>
+			|
+			<a href="/Gallery.html">Gallery</a>
+			|
+			<a href="/About me.html">About</a>
+		</p>
+	</div>
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			  <a href="https://www.google.com/maps/@36.2117489,44.8379638,8z" target="_blank" title="Open In Google Map"><p><span>Chwarqurna, Nishtyman st. No:18</span>
+				  46012, Ranya, Sulaymaniyah Iraq </p></a>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+961 (0) 750 177 22 82</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:danaart42@gmail.com" title="To Send Email">My Email</a></p>
+		</div>
+	</div>
+	<div class="footer-right">
+		<p class="footer-company-about">
+			<span>Social media</span>
+			Find me on social media.</p>
+		<div class="footer-icons">
+			<a href="https://www.facebook.com/ibrahimsaedmajed/" title="My Facebook"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/SayidIbrahim15" title="My Twitter"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.instagram.com/sayidoka/" title="My Instagram"><i class="fa fa-instagram"></i></a>
+		</div>
+		<br>
+	</div>
+		<p class="footer-company-name" style="text-align: center">© 2020 &nbsp; Ibrahim M. Ismael</p>
+</footer>
+</body>
+</html>

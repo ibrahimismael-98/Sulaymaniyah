@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<title>Introduce</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<style>
+	*{box-sizing: border-box;}		  
+body{
+	padding: auto;
+    background-color: black;
+  }
+.menu {
+  background: linear-gradient(
+  45deg,
+  rgba(255,255,255,1.00) -30%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(255,255,255,1.00) 120%
+ );
+}
+ul {
+	font-size: 5px;
+    text-decoration: none;
+    list-style-type:none;
+    display: flex;
+	overflow:hidden;
+    justify-content: space-around;
+  	padding-top: 12px;
+	padding-right: 19px;
+	padding-left: 19px;
+}	  
+.menu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding:0px 22px;
+  text-decoration: none;
+  border-radius: 19px;
+  font-size: 20px;
+  box-shadow: 0.9px hsla(0, 0%, 100%, 0);
+  margin: 0px;
+  margin-bottom: 2px;
+  margin-top: -8px;
+	font-family: Serif;
+}
+.menu a:hover {
+  background-color: hsla(0,0%,0%,0.67);
+  color:white;
+  border-radius: 22px;
+  transition-duration: 0.1s;
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}	  
+.menu a:active{
+  background-color: hsla(0,0%,0%,0.65);
+  border:0;
+  color:yellow;
+  border-radius: 19px;
+  transform: translateY(4px);
+  }
+.menu-opened{
+  background-color: hsla(0,0%,0%,0.65);
+  border:0;
+  color:yellow !important;
+  border-radius: 19px;
+  }
+article {
+  position: relative;
+  z-index: 1;
+  background:rgba(91,255,247,0.27);
+  padding: 20px;
+}
+article h1 {
+  margin-top: -100px;
+  margin-left: -20px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  font-size: 40px;
+  line-height: 40px;
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(20px);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6));
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cookie-Regular'), url(http://fonts.gstatic.com/s/cookie/v11/syky-y18lb0tSbf9kgqU.woff) format('woff');
+}
+article p {
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 18px;
+}
+.basik	{
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 19px;
+		margin:auto;
+		color:  #ffffff;
+		font: normal 36px 'Cookie', cursive;
+		text-align: center;
+	}
+.basik1{
+		color:  #e0ac1c !important;
+	} 
+footer{
+	position: inherit;
+	bottom: 0;
+}
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+.footer-distributed{
+  background: linear-gradient(
+  45deg,
+  rgba(0,0,0,1.00) -10%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(0,0,0,0.90) 120%
+ );
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-distributed .footer-left{
+	width: 30%;
+}
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+.footer-distributed .footer-left img{
+	width: 30%;
+	margin-left: 62px;
+}
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+.footer-distributed .footer-links{
+	color:  #000000;
+	margin: 20px 0 12px;
+    text-align: center;
+}
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+		color: white;
+	}
+.footer-distributed .footer-company-name{
+	color:  #000000;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+    text-align: center;
+	margin-top: 33px;
+}
+.footer-distributed .footer-center{
+	width: 35%;
+	margin-left: 45px;
+}
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+.footer-distributed .footer-right{
+	width: 30%;
+}
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 95px;
+}
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+	margin-left: 95px;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-distributed .footer-icons a:hover{
+		background-color:  #0072B7;
+	}
+@media (max-width: 880px) {
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+}</style>
+</head>
+<body>
+	<nav>
+    <div>
+      <ul class="menu">
+		 <li><a href="/index.html"><img src="/images/logo-rash.png" alt="logo"  width="80" height="30" id="logo"></a></li>
+        <li><a href="/Introduce.html" class="menu-opened">Introduce</a></li>
+        <li><a href="/Gallery.html">Gallery</a></li>
+        <li><a href="/About me.html">About</a></li>
+      </ul>
+  </div>
+</nav>
+<header class="hero">
+	<img src="/images/bg-sulaymani.jpg" style="width: 100%;" alt="Sulaymaniyah bagraund"></header>
+<article>
+  <h1 class="basik">Sulaymaniyah</h1>
+	<br><br>
+	<p>One of the major cities in both <strong>Kurdistan region and Iraq</strong>, situated <strong>385</strong> Km north <strong>Baghdad</strong> and <strong>198</strong> Km north east <strong>Erbil</strong> the capital of <strong>Iraqi Kurdistan</strong> Region. The city sits between two chains of mountains <strong>(Goyzha & Glazarda)</strong>, longitude <strong>(44.50- 46.16</strong>) East and latitude <strong>(35.04 - 36.30)</strong> North. The city was founded by <strong>Ibrahim Pasha</strong> in the year <strong>1784</strong>. Claudius James Rich the famous (March 28, 1787 - October 5, 1821) the <strong>British</strong> traveler and antiquarian scholar said in his book that <strong>Sulaimani</strong> – from the beginning of its establishment – had large markets, clean public baths (<strong>Turkish</strong> design). Today <strong>Sulaimani</strong> has developed in most modern life aspects, hotels, motels, supermarkets & Malls, theatres, restaurants & Parks.
+    From the cultural perspective, <strong>Sulaimani</strong> is considered to be the capital of <strong>Kurdish</strong> culture, the famous old <strong>Saray</strong> situates at the center of the city, while many museums are distributed. <strong>Sulaimani</strong> Embrace several universities & Educational Institutions both Public & Private, in addition to the <strong>American</strong> University.</p>
+	<br>
+<h1 class="basik">Sulaymaniyah of <span class="basik1">History</span></h1>
+<br><br>
+<p>The region of <strong>Sulaymaniyah</strong> was known as <strong>Zamwa</strong> prior to the foundation of the modern city in <strong>1784</strong>. The capital of the <strong>Kurdish Baban</strong> principality (<strong>1649–1850</strong>), before <strong>Sulaymaniyah</strong> was a territory named "<em><strong>Qelaçiwalan</strong></em>". At the time of the <strong>Babani's</strong> rule there were major conflicts between <strong>the Safavid dynasty</strong> and <strong>the Ottoman Empire</strong>. <strong>Qelaçiwalan</strong> became a battleground for the two rivals. Being of strategic importance and lying deep inside <strong>Safavid</strong> territory, there was concern that <strong>Qelaçiwalan</strong> would be attacked and captured if the <strong>Babani</strong> did not give the <strong>Safavids</strong> military support, as both <strong>Sultan Mahmud II</strong> and Nader Shah were trying to gain the support of the dispersed <strong>Kurdish</strong> Emirates. This obliged <strong>Mahmud Pasha</strong> of <strong>Baban</strong> in <strong>1781</strong> to think about moving the center of its Emirate to another safer place. He chose <strong>Melkendî</strong>, then a village but now a district in central <strong>Sulaymaniyah</strong>, to construct a number of Serahs for his political and armed units. In <strong>1783</strong>, <strong>Ibrahim</strong> Pasha of <strong>Baban</strong> became ruler of the Emirate and began the construction of a new city which would become the capital of the <strong>Baban</strong> Emirate. In <strong>1784</strong> he finished erecting a number of palaces for trade called <strong>Qeyserîs</strong> and bazaars, which were also used as baths, and began inviting people from the surrounding villages and Emirates to move to the newly established city. Soon Melkendî, which was originally intended to be the city itself, instead became one of its quarters and still is today. The new city of <strong>Sulaymaniyah</strong> was named after <strong>Sulaiman Baba</strong> who was the first <strong>Baban</strong> prince to gain control of the province of Şarezûr and its capital, <strong>Kirkuk</strong>. <strong>Sulaiman Baba</strong> invaded the neigboring <strong>Kurdish</strong> vassaldom of Erdalan, defeating their forces in <strong>1694</strong>. <strong>Ottoman Sultan Mustafa II</strong> assigned him the district of <strong>Baban</strong>, which included the town of <strong>Kirkuk</strong>. In the early <strong>1800s</strong> refugees from <strong>Ardalan</strong> moved to <strong>Sulaymaniyah</strong> including Mastura <strong>Ardalan</strong>, the widow of <strong>Xosraw Xanî Erdalan</strong>, the ruler of <strong>the kingdom</strong>. <strong>Erdalan</strong> wrote an account of <strong>Kurdish</strong> history in <strong>Persian</strong> and was buried in <strong>Sulaymaniyah</strong> when he died in <strong>1848</strong>. From <strong>1922</strong> to <strong>1924</strong>, <strong>Sulaymaniyah</strong> was designated the capital of the <strong>Kingdom of Kurdistan</strong>, a short lived unrecognized State declared by <strong>Iraqi Kurds</strong> following the collapse of <strong>the Ottoman Empire</strong>.</p>	
+<br>
+<h1 class="basik">Sulaymaniyah of <span class="basik1">Economic</span></h1>
+<br><br>
+<p>Sulaymaniyah governorate has much fertile land such as the Sharazur and Bitwen plains which are considered two of the most fertile plains in the Middle East. Historically, Sulaymaniyah was mainly agricultural and one of the major suppliers of wheat and other agricultural products. Its role declined due to the policies of Saddam Hussein aimed at reducing the city’s economical potential as it was a center of the Kurdish revolution. Since 2003 Iraq has seen a huge economic boom. Sulaymaniyah’s economy today relies on tourism, agriculture and a number of small factories, most involved in the building trade.
+In 2004 the Comprehensive Food Security and Vulnerability Analysis in Iraq released in-depth survey of Sulaymaniyah Governorate in which they surveyed each city. In this survey one can see the economic boom of 2003 mentioned earlier.</p>
+<br>
+<h1 class="basik">Sulaymaniyah of <span class="basik1">Education</span></h1>
+<br><br>
+<p>Students outside the main administrative building of The American University of Iraq – Sulaimani.
+Education is free from primary school until graduation from university. The University of Sulaymaniyah was opened in 1968 with instruction in Kurdish, Arabic, and English. It has faculties in engineering, agriculture, the arts, science, and medicine.It is the largest university in South Kurdistan. The University was moved during the 1980s to Erbil which is now known as the Salahaddin University.
+A new University of Sulaymaniyah was established in 1991, teaching in Kurdish, English and Arabic.
+In 2007 The American University of Iraq – Sulaimani, The American University of South Kurdistan – Sulaimani (AUI-S) was a new addition to the American universities in the Middle East, holding its first classes in October 2007. Instruction is in English only. In 2008 the University of Human Development was opened in Qaradax with three colleges and four departments. Its first year courses include law, politics, computer engineering and English language. Komar University of Science and Technology (KUST) – Sulaymani was established and licensed by the Ministry of High Education and Scientific Research in Kurdistan Region Government, by the official letter no. 17867/7 on October 18, 2009. KUST is a private university governed by a Board of Trustees and run by an Administration Council. Its main campus is located in the city of Sulaymani, in Kurdistan. KUST offered its first teaching classes in 2010 with an English language summer course (levels 1 and 3).</p>
+<br>
+<h1 class="basik">Sulaymaniyah of <span class="basik1">Transportation</span></h1>
+<br><br>
+<p>The city is dependent on road transport. 0n 20 July 2005 Sulaimaniyah International Airport opened, with regular flights to various European destinations such as Frankfurt, Stockholm, Malmö, Munich, Eindhoven and Düsseldorf as well as Middle Eastern cities like Dubai, Amman, Doha, Beirut, Damascus, Istanbul and Ankara.</p>
+</article>
+<footer class="footer-distributed">
+			<div class="footer-left">
+          <a href="/index.html" title="Home" style="text-decoration: none;"><img src="/images/logo-rash.png" alt="logo">
+				<h3 style="	text-align: center;"><span>Sulaymaniyah</span> City</h3></a>
+				<p class="footer-links">
+					<a href="/index.html">Home</a>
+					|
+					<a href="/Introduce.html">Introduce</a>
+					|
+					<a href="/Gallery.html">Gallery</a>
+					|
+					<a href="/About me.html">About</a>
+				</p>
+			</div>
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <a href="https://www.google.com/maps/@36.2117489,44.8379638,8z" target="_blank" title="Open In Google Map"><p><span>Chwarqurna, Nishtyman st. No:18</span>
+						  46012, Ranya, Sulaymaniyah Iraq </p></a>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+961 (0) 750 177 22 82</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:danaart42@gmail.com" title="To Send Email">My Email</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Social media</span>
+					Find me on social media.</p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/ibrahimsaedmajed/" title="My Facebook"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/SayidIbrahim15" title="My Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/sayidoka/" title="My Instagram"><i class="fa fa-instagram"></i></a>
+				</div>
+				<br>
+			</div>
+				  <p class="footer-company-name" style="text-align: center">© 2020 &nbsp; Ibrahim M. Ismael</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+<title>Gallery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<style>
+	* {
+ box-sizing: border-box;
+}
+body {
+  background-color: black;
+	padding: auto;
+}
+.menu {
+  background: linear-gradient(
+  45deg,
+  rgba(255,255,255,1.00) -30%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(255,255,255,1.00) 120%
+ );
+}
+ul {
+	font-size: 5px;
+    text-decoration: none;
+    list-style-type:none;
+    display: flex;
+	overflow:hidden;
+    justify-content: space-around;
+  	padding-top: 12px;
+	padding-right: 19px;
+	padding-left: 19px;
+}	  
+.menu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding:0px 22px;
+  text-decoration: none;
+  border-radius: 19px;
+  font-size: 22px;
+  box-shadow: 0.9px hsla(0, 0%, 100%, 0);
+  margin: 0px;
+  margin-bottom: 2px;
+  margin-top: -8px;
+  font-family: Serif;
+}
+.menu a:hover {
+  background-color: hsla(0,0%,0%,0.67);
+  color:white;
+  border-radius: 22px;
+  transition-duration: 0.1s;
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.menu a:active{
+  background-color: hsla(0,0%,0%,0.65);
+  border:0;
+  color:yellow;
+  border-radius: 19px;
+  transform: translateY(4px);
+  }
+.menu-opened{
+  background-color: hsla(0,0%,0%,0.65);
+  border:0;
+  color:yellow !important;
+  border-radius: 19px;
+  }	
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+.carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+@media (max-width: 600px) {
+                .carousel-caption {
+                           display: none; 
+    }
+  }
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cookie-Regular'), url(http://fonts.gstatic.com/s/cookie/v11/syky-y18lb0tSbf9kgqU.woff) format('woff');
+}	
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: auto;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 800px) {
+                                 .column {
+                                      flex: 50%;
+                                      max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+                                 .column {
+                                      flex: 100%;
+                                 max-width: 100%;
+  }
+}
+.header{
+  background: rgba(0,0,0,0.59);
+  text-align: center;
+		}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 48%;
+  z-index: 99;
+  font-size: 30px;
+  border: 2px solid #FFFFFF;
+  outline: none;
+  background-color: #FFFFFF;
+  color:blue;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+#myBtn:hover {
+background-color: white;
+color: red;
+border: none;
+}	
+footer{
+	position: inherit;
+	bottom: 0;
+}
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+.footer-distributed{
+  background: linear-gradient(
+  45deg,
+  rgba(0,0,0,1.00) -10%,
+  rgba(0,156,255,1.00) 44%,
+  rgba(0,0,0,1.90) 120%
+ );
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-distributed .footer-left{
+	width: 30%;
+	text-decoration: none;
+}
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+.footer-distributed .footer-left img{
+	width: 30%;
+	margin-left: 62px;
+}
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+.footer-distributed .footer-links{
+	color:  #000000;
+	margin: 20px 0 12px;
+    text-align: center;
+}
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+		color: white;
+	}
+.footer-distributed .footer-company-name{
+	color:  #000000;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+    text-align: center;
+	margin-top: 33px;
+}
+.footer-distributed .footer-center{
+	width: 35%;
+	margin-left: 45px;
+}
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+.footer-distributed .footer-right{
+	width: 30%;
+}
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 95px;
+}
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+	margin-left: 95px;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-distributed .footer-icons a:hover{
+		background-color:  #0072B7;
+	}
+@media (max-width: 880px) {
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+}
+.bg-photo{
+  background: linear-gradient(
+  0deg,
+  rgba(255,229,0,1.00) 50%,
+  rgba(0,0,0,1.00) 100%
+ );
+		}</style>
+</head>
+<body>	
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+<i class="fa fa-arrow-circle-o-up"></i>
+</button>	
+<script>
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<nav>
+   <div>
+      <ul class="menu">
+		 <li>
+		 <a href="/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('logo','','/images/home-logo.png',1)"><img src="/images/logo-rash.png" alt="logo" width="80" height="30" id="logo"></a>
+		</li>
+        <li><a href="/Introduce.html">Introduce</a></li>
+        <li><a href="/Gallery.html" class="menu-opened">Gallery</a></li>
+        <li><a href="/About me.html">About</a></li>
+      </ul>
+  </div>
+</nav>
+<div class="footer-distributed bg-photo" >
+	   <h3 style="text-align: center; margin-top: -52px; margin-bottom: ">Sulaymaniyah<span>Gallery</span></h3>
+<div class="row"> 
+ <div class="column">
+	<img src="/images/s_photo (38).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (4).jpg" style="width:100%"  alt="sulaymani-photo">
+    <img src="/images/s_photo (10).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (21).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (18).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (3).jpg" style="width:100%"  alt="sulaymani-photo">
+    <img src="/images/s_photo (2).jpg" style="width:100%"  alt="sulaymani-photo">
+	<img src="/images/s_photo (113).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (33).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (50).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (107).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (80).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (66).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (64).jpg" style="width:100%" alt="sulaymani-photo"> 
+	<img src="/images/s_photo (42).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (43).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (44).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (45).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (46).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (47).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (48).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (49).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (51).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (52).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (53).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (55).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (56).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (57).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (110).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (118).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (120).jpg" style="width:100%" alt="sulaymani-photo">
+  </div>	
+  <div class="column">
+    <img src="/images/s_photo (7).jpg" style="width:100%"  alt="sulaymani-photo">
+    <img src="/images/s_photo (6).jpg" style="width:100%"  alt="sulaymani-photo">
+    <img src="/images/s_photo (11).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (71).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (15).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (9).jpg" style="width:100%"  alt="sulaymani-photo">
+	<img src="/images/s_photo (12).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (22).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (32).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (20).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (5).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (58).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (59).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (60).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (62).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (63).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (65).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (67).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (68).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (69).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (61).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (70).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (72).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (73).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (74).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (75).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (105).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (106).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (116).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (112).jpg" style="width:100%" alt="sulaymani-photo">
+  </div> 
+  <div class="column">
+    <img src="/images/s_photo (82).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (87).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (32).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (25).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (30).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (26).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (17).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (23).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (31).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (32).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (28).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (34).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (35).jpg" style="width:100%" alt="sulaymani-photo">  
+	<img src="/images/s_photo (76).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (77).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (78).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (79).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (81).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (8).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (83).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (84).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (85).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (86).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (14).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (88).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (89).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (90).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (109).jpg" style="width:100%" alt="sulaymani-photo">
+  </div>
+  <div class="column">
+    <img src="/images/s_photo (13).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (16).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/dukan3.jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (121).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (27).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (54).jpg" style="width:100%" alt="sulaymani-photo">  
+	<img src="/images/s_photo (36).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (37).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (104).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (39).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (40).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (41).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (91).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (92).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (99).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (93).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (94).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (95).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (96).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (19).jpg" style="width:100%" alt="sulaymani-photo">
+	<img src="/images/s_photo (97).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (98).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (122).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (100).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (101).jpg" style="width:100%" alt="sulaymani-photo">
+    <img src="/images/s_photo (102).jpg" style="width:100%" alt="sulaymani-photo">
+  </div>
+</div>
+</div>
+<footer class="footer-distributed">
+<div class="footer-left">
+<a href="/index.html" title="Home" style="text-decoration: none;"><img src="/images/logo-rash.png" alt="logo">
+<h3 style="	text-align: center;"><span>Sulaymaniyah</span> City</h3></a>
+<p class="footer-links">
+<a href="/index.html">Home</a>
+|
+<a href="/Introduce.html">Introduce</a>
+|
+<a href="/Gallery.html">Gallery</a>
+|
+<a href="/About me.html">About</a>
+</p>
+</div>
+<div class="footer-center">
+<div>
+<i class="fa fa-map-marker"></i>
+<a href="https://www.google.com/maps/@36.2117489,44.8379638,8z" target="_blank" title="Open In Google Map"><p><span>Chwarqurna, Nishtyman st. No:18</span>
+46012, Ranya, Sulaymaniyah Iraq </p></a>
+</div>
+<div>
+<i class="fa fa-phone"></i>
+<p>+961 (0) 750 177 22 82</p>
+</div>
+<div>
+<i class="fa fa-envelope"></i>
+<p><a href="mailto:danaart42@gmail.com" title="To Send Email">My Email</a></p>
+</div>
+</div>
+<div class="footer-right">
+<p class="footer-company-about">
+<span>Social media</span>
+Find me on social media.</p>
+<div class="footer-icons">
+<a href="https://www.facebook.com/ibrahimsaedmajed/" title="My Facebook"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/SayidIbrahim15" title="My Twitter"><i class="fa fa-twitter"></i></a>
+<a href="https://www.instagram.com/sayidoka/" title="My Instagram"><i class="fa fa-instagram"></i></a>
+</div>
+<br>
+</div>
+<p class="footer-company-name" style="text-align: center">© 2020 &nbsp; Ibrahim M. Ismael</p>
+</footer>
+</body>
+</html>
